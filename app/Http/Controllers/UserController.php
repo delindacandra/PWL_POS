@@ -13,17 +13,16 @@ class UserController extends Controller
         //$data = DB::select('select * from m_user');
         //return view('user', ['data' => $data]);
 
-        //tambah data user dengan Eloquent Model
-        $data=[
-            'level_id' => 2,
-            'username' =>'manager_tiga',
-            'nama' => 'Manager 3',
-            'password' => Hash::make('hehehe')
-        ];
-        UserModel::create($data);
+        //retrievinng single models
+            //$user = UserModel::firstWhere('level_id', 1);
+            //return view('user', ['data' => $user]);
+
+        $user = UserModel::findOr(20,['username', 'nama'],function(){
+            abort(404);
+        });
 
         //akses model UserModel
-        $user = UserModel::all();
+        //$user = UserModel::all();
         return view('user', ['data' => $user]);
     }
 }
