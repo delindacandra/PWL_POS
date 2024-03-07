@@ -17,7 +17,8 @@ class UserController extends Controller
             //$user = UserModel::firstWhere('level_id', 1);
             //return view('user', ['data' => $user]);
 
-        $user = UserModel::where('username','manager9')->fisrtOfFail();
+        $user = UserModel::where('level_id', 2)->count();
+        //dd($user);
         return view('user',['data' => $user]);
 
         //akses model UserModel
