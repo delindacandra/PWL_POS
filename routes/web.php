@@ -47,3 +47,7 @@ Route::get('/user/ubah/{id}', [UserController::class, 'ubah']);
 Route::put('/user/ubah/ubah_simpan/{id}', [UserController::class, 'ubah_simpan']);
 
 Route::get('/user/hapus/{id}', [UserController::class, 'hapus']);
+
+Route::get('/kategori/create', [KategoriController::class, 'create']);
+
+Route::post('/kategori', [KategoriController::class, 'store']);
