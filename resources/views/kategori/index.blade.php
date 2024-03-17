@@ -8,7 +8,9 @@
 @section('content')
 <div class="container">
     <div class="card">
-        <div class="card-header">Manage Kategori</div>
+        <div class="card-header">Manage Kategori
+            <a href="../public/kategori/create" class="btn btn-primary float-right">Add</a>
+        </div>
         <div class ="card-body">
             {{$dataTable->table()}}
         </div>
