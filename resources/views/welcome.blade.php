@@ -9,7 +9,7 @@
 {{-- Content body: main page content --}}
 
 @section('content_body')
-<p>Wlcome to this beautiful admin panel.</p>
+<p>Welcome to this beautiful admin panel.</p>
 @stop
 
 {{-- Push extra CSS --}}
