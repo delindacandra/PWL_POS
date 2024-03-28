@@ -57,3 +57,7 @@ Route::get('/kategori/{id}/edit', [KategoriController::class, 'edit']);
 Route::put('/kategori/{id}/edit', [KategoriController::class, 'update']);
 
 Route::delete('/kategori/{id}/delete', [KategoriController::class, 'delete']);
+
+Route::get('/form', function () {
+    return view('formGeneral');
+});
