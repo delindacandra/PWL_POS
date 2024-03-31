@@ -60,3 +60,14 @@ Route::delete('/kategori/{id}/delete', [KategoriController::class, 'delete']);
 Route::get('/form', function () {
     return view('formGeneral');
 });
+
+Route::group(['prefix' => 'user'], function(){
+    Route::get('/', [UserController::class,'index']);
+    Route::post('/list', [UserController::class,'list']);
+    Route::get('/create', [UserController::class,'create']);
+    Route::post('/', [UserController::class,'store']);
+    Route::get('/{id}', [UserController::class,'show']);
+    Route::get('/{id}/edit', [UserController::class,'edit']);
+    Route::put('/{id}', [UserController::class, 'update']);
+    Route::delete('/{id}', [UserController::class, 'destroy']);
+});
