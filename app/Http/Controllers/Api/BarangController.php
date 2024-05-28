@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\BarangModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class BarangController extends Controller
 {
@@ -15,7 +16,7 @@ class BarangController extends Controller
     public function store(Request $request)
     {
         $barang = BarangModel::create($request->all());
-        return response()->json($barang, 210);
+        return response()->json($barang, 201);
     }
     public function show(BarangModel $barang)
     {
@@ -34,4 +35,5 @@ class BarangController extends Controller
             'message' => 'Data terhapus',
         ]);
     }
+
 }
